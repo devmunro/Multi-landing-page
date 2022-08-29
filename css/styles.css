@@ -1,0 +1,14 @@
+
+main {
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+section {
+    width: 70%;
+    height: 80vh;
+    margin: 25px;
+    box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 0.4);
+    border: black solid 2px;
+}
