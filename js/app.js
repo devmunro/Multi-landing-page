@@ -11,9 +11,10 @@ console.log(section[i])
 
      li = document.createElement("li");
      let attribute = section[i].getAttribute("data-nav");
-     const liLinks = li.innerHTML = `<a href="#section${[i]}" >${attribute}</a>`
+     li.innerHTML = `<a href="#section${[i+1]}" >${attribute}</a>`
     
-    ul.appendChild(li); 
+    ul.append(li); 
+   
   }
 
 
