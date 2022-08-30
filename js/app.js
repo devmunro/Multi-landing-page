@@ -1,3 +1,5 @@
+//create nav links via JS, link to section page
+
 let ul =document.querySelector("ul");
 let li;
 let section = document.querySelectorAll("section");
@@ -10,6 +12,7 @@ for ( let i=0; i < main.children.length; i++) {
 console.log(section[i])
 
      li = document.createElement("li");
+     li.classList.add("links")
      let attribute = section[i].getAttribute("data-nav");
      li.innerHTML = `<a href="#section${[i+1]}" >${attribute}</a>`
     
@@ -17,6 +20,25 @@ console.log(section[i])
    
   }
 
+// active class
+  const links = document.querySelectorAll(".links");
 
-});
+  for(let i = 0; i <links.length; i++) {
+     links[i].addEventListener("click", active) 
+  }
+  
+      
+  function active(e) {
 
+    const activeClass = document.getElementsByClassName("active");
+
+    for(let i = 0; i <activeClass.length; i++)
+    { activeClass[i].classList.remove("active")
+    
+    }
+    
+    e.currentTarget.classList.add("active");
+
+  }
+
+})
