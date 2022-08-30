@@ -42,3 +42,14 @@ console.log(section[i])
   }
 
 })
+
+
+//scroll to sections
+document.querySelectorAll("a").forEach(linkScroll => {
+    linkScroll.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(e.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
