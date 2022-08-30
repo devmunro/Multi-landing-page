@@ -27,8 +27,19 @@ ul {
   padding: 0;
 }
 
+ul li
+{
+    list-style-image: url("/css/images/knight.svg");
+    background-size: 40px;
+}
+
+.active {
+    list-style-image: url("/css/images/knightActive.svg");
+}
+
 ul li a {
     color: white;
+    
 }
 
 /* Landing Page styles */
@@ -48,3 +59,5 @@ section {
 .section {
     scroll-margin-top: 5em;
 }
+
+
