@@ -11,6 +11,7 @@ addEventListener("DOMContentLoaded", (event) => {
 
     li = document.createElement("li");
     li.classList.add("links");
+    
     let attribute = section[i].getAttribute("data-nav");
     li.innerHTML = `<a href="#section${[i + 1]}" >${attribute}</a>`;
 
@@ -18,26 +19,39 @@ addEventListener("DOMContentLoaded", (event) => {
   }
 
   // active class
-  const links = document.querySelectorAll(".links");
+  let links = document.querySelectorAll(".links");
 
-  for (let i = 0; i < links.length; i++) {
-    links[i].addEventListener("click", active);
-  }
 
-  function active(e) {
-    const activeClass = document.getElementsByClassName("active");
 
-    for (let i = 0; i < activeClass.length; i++) {
-      activeClass[i].classList.remove("active");
+  //add active class to section
+  let sections = document.querySelectorAll("section");
+  function makeActive() {
+    for (const section of sections) {
+      const box = section.getBoundingClientRect();
+
+      const VALUE = 150;
+      if (box.top <= VALUE && box.bottom >= VALUE) {
+        section.classList.add("active");
+        }            
+        
+     else {
+        section.classList.remove("active");
+        
+      }
     }
-
-    e.currentTarget.classList.add("active");
   }
+
+
+
+  document.addEventListener("scroll", function () {
+    makeActive();
+    
+
+  });
 
   // link scroll
   document.querySelectorAll("a").forEach((linkScroll) => {
     linkScroll.addEventListener("click", function (e) {
-        
       e.preventDefault();
       document.querySelector(linkScroll.getAttribute("href")).scrollIntoView({
         behavior: "smooth",
