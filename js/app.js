@@ -3,13 +3,13 @@ let ul = document.querySelector("ul");
 let li;
 let section = document.querySelectorAll("section");
 let main = document.querySelector("main");
+let footer = document.querySelector("footer");
+let form;
 
 addEventListener("DOMContentLoaded", (event) => {
   //create nav links via JS, link to section page
   for (let i = 0; i < main.children.length; i++) {
     console.log(section[i]);
-    section[0].classList.add("active")
-    
     li = document.createElement("li");
     let attribute = section[i].getAttribute("data-nav");
     li.setAttribute("data-nav", attribute);
@@ -21,20 +21,19 @@ addEventListener("DOMContentLoaded", (event) => {
 
   // active class to top section
   let links = document.querySelectorAll("li");
-  section[0].classList.add("active")
-  links[0].classList.add("active")
+  section[0].classList.add("active");
+  links[0].classList.add("active");
 
   //add active class to section and li
   let sections = document.querySelectorAll("section");
   function makeActive() {
     for (const section of sections) {
       const box = section.getBoundingClientRect();
-       const VALUE = 150;
+      const VALUE = 150;
       if (box.top <= VALUE && box.bottom >= VALUE) {
         section.classList.add("active");
-        
+
         for (let i = 0; i < ul.children.length; i++) {
-            
           if (
             links[i].getAttribute("data-nav") !==
             section.getAttribute("data-nav")
@@ -63,4 +62,22 @@ addEventListener("DOMContentLoaded", (event) => {
       });
     });
   });
+
+  //create nav links via JS, link to section page
+
+  form = document.createElement("form");
+
+  form.innerHTML = `
+    <fieldset>
+    <legend>Sign up to our weekly email </legend>
+    <input required type="text" placeholder="Your Name Here"></input>
+    <input required type="email" placeholder="Your Email Here"></input>
+    <br/>
+    <input required type="checkbox">I agree to receive weekly emails</input>
+    <br/>
+    
+    <input type="submit"></input>
+    </fieldset>`;
+
+  footer.append(form);
 });

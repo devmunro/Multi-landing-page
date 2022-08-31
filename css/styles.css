@@ -57,3 +57,6 @@ section {
   border: black solid 2px;
 }
 
+footer {
+    height: auto;
+}
