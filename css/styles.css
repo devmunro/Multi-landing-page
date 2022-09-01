@@ -106,4 +106,12 @@ background-color: red;
 /* footer styles */
 footer {
     height: auto;
+    background-color: red;
+}
+
+form {
+    width: 40%;
+    background-color: white;
+    border: ;
+    
 }
