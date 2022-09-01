@@ -1,9 +1,10 @@
 /* GLobal styles */
 
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family: 'Inter', sans-serif;
   font-size: 0.9em;
+  width: 70%;
  
 }
 
@@ -13,13 +14,12 @@ h1,h2 {
 }
 /* navBar styles */
 nav {
-  width: 100%;
+  width: 70%;
   height: auto;
   background: #F85C5C;
   position: fixed;
   top: 0;
   z-index: 1;
-
   
   
 }
@@ -66,12 +66,12 @@ main {
   
 }
 section {
-  width: 90%;
+  
   height: 80vh;
   margin: 4em;
    scroll-margin-top: 4em; /*fix for fixed bar not overlapping  */
    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.4);
-  border: black solid 2px;
+  border: black solid 1px; 
   display:flex;
   position: relative;
 }
@@ -124,11 +124,14 @@ color: white;
 /* footer styles */
 footer {
     height: auto;
+    display: flex;
+    justify-content: center;
    
 }
 
 form {
     width: 40%;
     background-color: white;
+
     
 }

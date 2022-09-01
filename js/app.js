@@ -88,9 +88,10 @@ addEventListener("DOMContentLoaded", (event) => {
   function submitted (e) {
     e.preventDefault();
     
-    form.reportValidity() //from https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reportValidity
-  
- 
+   if ( form.reportValidity() )//from https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reportValidity
+   {
+   alert("Thank you for subscribing")
+  }
   }
 
 });
