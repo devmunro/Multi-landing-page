@@ -8,7 +8,6 @@ body {
 nav {
   width: 100%;
   height: auto;
-  padding: 20px;
   background: red;
   position: fixed;
   top: 0;
@@ -34,11 +33,18 @@ ul li
 
 .active {
     list-style-image: url("/css/images/knightActive.svg");
+    background-color: white;
+    
+}
+.active a {
+
+    color: black;
 }
 
 ul li a {
     color: white;
     text-decoration: none;
+    
     
 }
 
@@ -52,8 +58,8 @@ main {
 section {
   width: 70%;
   height: 80vh;
-  margin: 5em;
-   scroll-margin-top: 5em; /*fix for fixed bar not overlapping  */
+  margin: 3em;
+   scroll-margin-top: 3em; /*fix for fixed bar not overlapping  */
   box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 0.4);
   border: black solid 2px;
   display:flex;
