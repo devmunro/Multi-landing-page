@@ -2,26 +2,23 @@
 
 body {
   margin: 0 auto;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 0.8em;
   width: 70%;
- 
 }
 
-h1,h2 {
-    font-family: 'Grenze Gotisch', cursive;
-   
+h1,
+h2 {
+  font-family: "Grenze Gotisch", cursive;
 }
 /* navBar styles */
 nav {
   width: 70%;
   height: auto;
-  background: #F85C5C;
+  background: #f85c5c;
   position: fixed;
   top: 0;
   z-index: 1;
-  
-  
 }
 
 ul {
@@ -29,33 +26,25 @@ ul {
   justify-content: flex-start;
   align-content: center;
   margin: 0 auto;
-
 }
 
-ul li
-{
-    list-style-image: url("/css/images/knight.svg");
-    background-size: 40px;
-    margin-left: 30px;
-    
+ul li {
+  list-style-image: url("/css/images/knight.svg");
+  background-size: 40px;
+  margin-left: 30px;
 }
 
 .active {
-    list-style-image: url("/css/images/knightActive.svg");
-    background-color: white;
-    
+  list-style-image: url("/css/images/knightActive.svg");
+  background-color: white;
 }
 .active a {
-
-    color: black;
+  color: black;
 }
 
 ul li a {
-    color: white;
-    text-decoration: none;
-    
-    
-    
+  color: white;
+  text-decoration: none;
 }
 
 /* Landing Page styles */
@@ -63,143 +52,121 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-  
 }
 section {
-  
   height: 80vh;
   margin: 4em;
-   scroll-margin-top: 4em; /*fix for fixed bar not overlapping  */
-   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.4);
-  border: black solid 1px; 
-  display:flex;
+  scroll-margin-top: 4em; /*fix for fixed bar not overlapping  */
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.4);
+  border: black solid 1px;
+  display: flex;
   position: relative;
 }
 
 h1 {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 10%;
-    font-size: 3em;
-
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 10%;
+  font-size: 3em;
 }
 
 section p {
-    width: 70%;
-    text-align: justify;
+  width: 70%;
+  text-align: justify;
 }
-
 
 section img {
-    width: 40%;
+  width: 40%;
 }
 section div {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #section1 div:nth-child(3) {
-background-color: #F85C5C;
-color: white;
-
+  background-color: #f85c5c;
+  color: white;
 }
 
 #section2 {
-    background-color: #F85C5C;
-    color: white;
+  background-color: #f85c5c;
+  color: white;
 }
 
 .portraits {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 /* footer styles */
 footer {
-    height: auto;
-    display: flex;
-    justify-content: center;
-   
+  height: auto;
+  display: flex;
+  justify-content: center;
 }
 
 form {
-    width: 40%;
-    background-color: white;
-
-    
+  width: 40%;
+  background-color: white;
 }
 
-@media screen and (max-width: 1200px){
-    body {
-        width:100%;
-    }
-    nav {
-        width:100%;
-     }
-
-     
-} 
-
-
-
-
-
-
-
-
-@media screen and (max-width: 700px){
- 
-    ul {
-        flex-direction: column;
-    }
-    
-    h1 {
-        display: none;
-    }
-
-    #section1 {
-        margin-top: 9em;
-    }
-
-    section {
-      width: 70%;
-      flex-direction: column;
-      height: auto;
-            scroll-margin-top: 9em;
-    }
-    
-    section p {
-        width: 90%;
-    }
-   section img {
-        width:20%;
-     }
-
-     .portraits { 
-        width: 100%;
-        height: 350px;
-        object-fit: fill;
-       
-     }
-
-     footer {
-        width: 50%;
-     }
-
-    }
-
-    
-@media screen and (max-width: 450px){
-    section {
-        width: 90%;
+@media screen and (max-width: 1200px) {
+  body {
+    width: 100%;
+  }
+  nav {
+    width: 100%;
+  }
 }
+
+@media screen and (max-width: 700px) {
+  ul {
+    flex-direction: column;
+  }
+
+  h1 {
+    display: none;
+  }
+
+  #section1 {
+    margin-top: 9em;
+  }
+
+  section {
+    width: 70%;
+    flex-direction: column;
+    height: auto;
+    scroll-margin-top: 9em;
+  }
+
+  section p {
+    width: 90%;
+  }
+  section img {
+    width: 20%;
+  }
+
+  .portraits {
+    width: 100%;
+    height: 350px;
+    object-fit: fill;
+  }
+
+  footer {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  section {
+    width: 90%;
+  }
 }

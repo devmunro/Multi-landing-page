@@ -66,8 +66,8 @@ addEventListener("DOMContentLoaded", (event) => {
   //create nav links via JS, link to section page
 
   form = document.createElement("form");
- form.setAttribute("method", "GET")
- form.setAttribute("action", " ")
+  form.setAttribute("method", "GET");
+  form.setAttribute("action", " ");
   form.innerHTML = `
     <fieldset>
     <legend>Sign up to our weekly email </legend>
@@ -83,15 +83,14 @@ addEventListener("DOMContentLoaded", (event) => {
   footer.append(form);
 
   let submit = document.querySelector(`[type="submit"]`);
-  submit.addEventListener("click", submitted)
+  submit.addEventListener("click", submitted);
 
-  function submitted (e) {
+  function submitted(e) {
     e.preventDefault();
-    
-   if ( form.reportValidity() )//from https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reportValidity
-   {
-   alert("Thank you for subscribing")
-  }
-  }
 
+    if (form.reportValidity()) {
+      //from https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reportValidity
+      alert("Thank you for subscribing");
+    }
+  }
 });
