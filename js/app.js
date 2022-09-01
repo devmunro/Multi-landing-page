@@ -66,18 +66,40 @@ addEventListener("DOMContentLoaded", (event) => {
   //create nav links via JS, link to section page
 
   form = document.createElement("form");
-
+ form.setAttribute("method", "GET")
+ form.setAttribute("action", " ")
   form.innerHTML = `
     <fieldset>
     <legend>Sign up to our weekly email </legend>
-    <input required type="text" placeholder="Your Name Here"></input>
-    <input required type="email" placeholder="Your Email Here"></input>
+    <input required type="text" name ="name" placeholder="Your Name Here"></input>
+    <input required type="email" name ="email" placeholder="Your Email Here"></input>
     <br/>
-    <input required type="checkbox">I agree to receive weekly emails</input>
+    <input required name="checkbox" type="checkbox">I agree to receive weekly emails</input>
     <br/>
     
     <input type="submit"></input>
     </fieldset>`;
 
   footer.append(form);
+
+  let submit = document.querySelector(`[type="submit"]`);
+  let name = document.querySelector(`[placeholder="Your Name Here"]`);
+  let email = document.querySelector(`[placeholder="Your Email Here"]`);
+  submit.addEventListener("click", submitted)
+
+  function submitted (e) {
+    e.preventDefault();
+    
+
+ if (form.checkValidity()) {
+    form.textContent = `Thank you`
+ } else {
+    name.setAttribute("placeholder", "PLEASE TYPE YOUR NAME")
+    name.style.border = "solid red 2px"
+
+
+    email.setAttribute("placeholder", "ME")
+    email.style.border = "solid red 2px"
+ }
+  }
 });
