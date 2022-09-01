@@ -2,13 +2,19 @@
 
 body {
   margin: 0;
-  
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9em;
+ 
+}
+
+h1,h2 {
+    font-family: 'Grenze Gotisch', cursive;
 }
 /* navBar styles */
 nav {
   width: 100%;
   height: auto;
-  background: red;
+  background: #F85C5C;
   position: fixed;
   top: 0;
   z-index: 1;
@@ -19,16 +25,18 @@ nav {
 
 ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-content: center;
   margin: 0 auto;
-  padding: 0;
+
 }
 
 ul li
 {
     list-style-image: url("/css/images/knight.svg");
     background-size: 40px;
+    margin-left: 30px;
+    
 }
 
 .active {
@@ -44,6 +52,7 @@ ul li
 ul li a {
     color: white;
     text-decoration: none;
+    
     
     
 }
@@ -94,15 +103,17 @@ section div {
     align-items: center;
 }
 
-#section1 div:nth-child(2) {
-background-color: red;
+#section1 div:nth-child(3) {
+background-color: #F85C5C;
+color: white;
 
 }
 
 #section2 {
-    background-color: red;
+    background-color: #F85C5C;
     color: white;
 }
+
 .portraits {
     object-fit: fill;
     height: 100%;
@@ -112,12 +123,11 @@ background-color: red;
 /* footer styles */
 footer {
     height: auto;
-    background-color: red;
+   
 }
 
 form {
     width: 40%;
     background-color: white;
-    border: ;
     
 }
