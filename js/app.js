@@ -9,7 +9,6 @@ let form;
 addEventListener("DOMContentLoaded", (event) => {
   //create nav links via JS, link to section page
   for (let i = 0; i < main.children.length; i++) {
-    console.log(section[i]);
     li = document.createElement("li");
     let attribute = section[i].getAttribute("data-nav");
     li.setAttribute("data-nav", attribute);
@@ -19,14 +18,14 @@ addEventListener("DOMContentLoaded", (event) => {
     ul.append(li);
   }
 
-  // active class to top section
+  // active class to top section, and first link
   let links = document.querySelectorAll("li");
   section[0].classList.add("active");
   links[0].classList.add("active");
 
   //add active class to section and li
   let sections = document.querySelectorAll("section");
-  function makeActive() {
+   makeActive= () => {
     for (const section of sections) {
       const box = section.getBoundingClientRect();
       const VALUE = 150;
@@ -49,11 +48,11 @@ addEventListener("DOMContentLoaded", (event) => {
     }
   }
 
-  document.addEventListener("scroll", function () {
+  document.addEventListener("scroll", ()=> {
     makeActive();
   });
 
-  // link scroll
+  // scroll to section on link click 
   document.querySelectorAll("a").forEach((linkScroll) => {
     linkScroll.addEventListener("click", function (e) {
       e.preventDefault();
@@ -63,7 +62,7 @@ addEventListener("DOMContentLoaded", (event) => {
     });
   });
 
-  //create nav links via JS, link to section page
+  //create form via JS
 
   form = document.createElement("form");
   form.setAttribute("method", "GET");
@@ -85,6 +84,8 @@ addEventListener("DOMContentLoaded", (event) => {
   let submit = document.querySelector(`[type="submit"]`);
   submit.addEventListener("click", submitted);
 
+
+  // function prevents page refresh and also check if all required inputs have been completed before submit processed
   function submitted(e) {
     e.preventDefault();
 

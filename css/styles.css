@@ -118,6 +118,9 @@ form {
   background-color: white;
 }
 
+/* 
+MEDIA QUERIES StYLES */
+
 @media screen and (max-width: 1200px) {
   body {
     width: 100%;
