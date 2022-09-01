@@ -80,6 +80,7 @@ section p {
 
 section img {
   width: 40%;
+  padding: 5px;
 }
 section div {
   width: 100%;
