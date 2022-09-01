@@ -131,7 +131,7 @@ MEDIA QUERIES StYLES */
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   ul {
     flex-direction: column;
   }
@@ -164,9 +164,7 @@ MEDIA QUERIES StYLES */
     object-fit: fill;
   }
 
-  footer {
-    width: 50%;
-  }
+  
 }
 
 @media screen and (max-width: 450px) {
