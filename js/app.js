@@ -92,14 +92,8 @@ addEventListener("DOMContentLoaded", (event) => {
     
 
  if (form.checkValidity()) {
-    form.textContent = `Thank you`
- } else {
-    name.setAttribute("placeholder", "PLEASE TYPE YOUR NAME")
-    name.style.border = "solid red 2px"
-
-
-    email.setAttribute("placeholder", "ME")
-    email.style.border = "solid red 2px"
- }
+    alert(`Thank you`)
+ 
   }
+}
 });
