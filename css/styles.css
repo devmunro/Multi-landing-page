@@ -29,13 +29,13 @@ ul {
 }
 
 ul li {
-  list-style-image: url("css/images/knight.svg");
+  list-style-image: url("images/knight.svg");
   background-size: 40px;
   margin-left: 30px;
 }
 
 .active {
-  list-style-image: url("/css/images/knightActive.svg");
+  list-style-image: url("images/knightActive.svg");
   background-color: white;
 }
 .active a {
