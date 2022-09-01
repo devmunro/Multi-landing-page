@@ -72,7 +72,7 @@ addEventListener("DOMContentLoaded", (event) => {
     <fieldset>
     <legend>Sign up to our weekly email </legend>
     <input required type="text" name ="name" placeholder="Your Name Here"></input>
-    <input required type="email" name ="email" placeholder="Your Email Here"></input>
+    <input required type="email" name ="email" placeholder="Your Email Here" onclick="checkValidity()"></input>
     <br/>
     <input required name="checkbox" type="checkbox">I agree to receive weekly emails</input>
     <br/>
@@ -83,17 +83,14 @@ addEventListener("DOMContentLoaded", (event) => {
   footer.append(form);
 
   let submit = document.querySelector(`[type="submit"]`);
-  let name = document.querySelector(`[placeholder="Your Name Here"]`);
-  let email = document.querySelector(`[placeholder="Your Email Here"]`);
   submit.addEventListener("click", submitted)
 
   function submitted (e) {
     e.preventDefault();
     
-
- if (form.checkValidity()) {
-    alert(`Thank you`)
+    form.reportValidity() //from https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reportValidity
+  
  
   }
-}
+
 });
